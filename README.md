@@ -5,6 +5,12 @@ Time starts when the beginning cutscene is complete and you gain control of the 
 ## Splits 
 Splits when crystals are placed into the boss statues.
 Options for 
-* 1 Boss Statue Activated
-* 2 Boss Statues Activated
-* 3 Boss Statues Activated (Same as Core Activated)
+* Glurch Statue Activated
+* Ghorm Statue Activated
+* Malugaz Statue Activated
+* Core Activated
+- Not on by default because the Core is activated when all 3 Boss Statues are activated
+- Alternative if you do not want to split for each statue
+
+## Reset
+Timer gets reset when you exit to the title screen. Timer has to be reset manually for completed runs.
