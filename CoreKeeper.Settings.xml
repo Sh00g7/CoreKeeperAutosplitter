@@ -1,0 +1,87 @@
+
+<Settings>
+  <Setting Id="coreActivated" Label="Core Activated" ToolTip="Alternative if you do not want to split for each statue. The Core is activated when all 3 Boss Statues are activated." State="false" />
+  <Setting Id="greatWallLowered" Label="Great Wall Lowered" State="false" />
+
+  <Setting Id="bosses" Label="Bosses" State="false">
+    <Setting Id="Glurch" Label="Glurch" State="false" />
+    <Setting Id="Ghorm" Label="Ghorm" State="false" />
+    <Setting Id="Malugaz" Label="Malugaz" State="false" />
+    <Setting Id="Hivemother" Label="Hive Mother" State="false" />
+    <Setting Id="Azeos" Label="Azeos" State="false" />
+    <Setting Id="Omoroth" Label="Omoroth" State="false" />
+    <Setting Id="RaAkar" Label="Ra-Akar" State="false" />
+    <Setting Id="KingSlime" Label="King Slime" State="false" />
+    <Setting Id="Ivy" Label="Ivy" State="false" />
+    <Setting Id="Morpha" Label="Morpha" State="false" />
+    <Setting Id="Igneous" Label="Igneous" State="false" />
+    <Setting Id="AtlanteanWorm" Label="Atlantean Worm" State="false" />
+    <Setting Id="Urschleim" Label="Urschleim" State="false" />
+    <Setting Id="Druidra" Label="Druidra" State="false" />
+    <Setting Id="Crydra" Label="Crydra" State="false" />
+    <Setting Id="Pyrdra" Label="Pyrdra" State="false" />
+    <Setting Id="CoreCommander" Label="Core Commander" State="false" />
+    <Setting Id="AllBosses" Label="All Bosses Defeated" State="false" />
+  </Setting>
+
+  <Setting Id="statues" Label="Statues" State="true">
+    <Setting Id="obj2501" Label="Glurch Statue Activated" State="true" />
+    <Setting Id="obj2500" Label="Ghorm Statue Activated" State="true" />
+    <Setting Id="obj2502" Label="Malugaz Statue Activated" State="true" />
+  </Setting>
+
+  <Setting Id="items" Label="Items" State="false">
+    <Setting Id="crystals" Label="Statue Crystals" State="false">
+      <Setting Id="i2501" Label="Glurch Eye" State="false" />
+      <Setting Id="i2500" Label="Ghorm's Horn" State="false" />
+      <Setting Id="i2502" Label="Stolen Crystal Heart" State="false" />
+    </Setting>
+
+    <Setting Id="scanners" Label="Scanners" State="false">
+      <Setting Id="i8211" Label="Ghorm Scanner" State="false" />
+      <Setting Id="i8212" Label="Malugaz Scanner" State="false" />
+      <Setting Id="i8210" Label="Hive Mother Scanner" State="false" />
+      <Setting Id="i8220" Label="Azeos Scanner" State="false" />
+      <Setting Id="i8225" Label="Omoroth Scanner" State="false" />
+      <Setting Id="i8227" Label="Ra-Akar Scanner" State="false" />
+      <Setting Id="i8221" Label="Ivy Scanner" State="false" />
+      <Setting Id="i8226" Label="Morpha Scanner" State="false" />
+      <Setting Id="i8228" Label="Igneous Scanner" State="false" />
+      <Setting Id="i8229" Label="Atlantean Worm Scanner" State="false" />
+      <Setting Id="i8231" Label="Druidra Scanner" State="false" />
+      <Setting Id="i8232" Label="Crydra Scanner" State="false" />
+      <Setting Id="i8233" Label="Pyrdra Scanner" State="false" />
+      <Setting Id="i8234" Label="Urschleim Scanner" State="false" />
+    </Setting>
+
+    <Setting Id="bossSummons" Label="Boss Summons" State="false">
+      <Setting Id="i2506" Label="Skull of the Corrupted Shaman" ToolTip="Malugaz" State="false" />
+      <Setting Id="i150" Label="Large Shiny Glimmering Object" ToolTip="Azeos" State="false" />
+      <Setting Id="i8384" Label="Expert Lure" ToolTip="Omoroth" State="false" />
+      <Setting Id="i151" Label="Thumper" ToolTip="Ra-Akar" State="false" />
+      <Setting Id="i2508" Label="Crown Summoning Idol" ToolTip="King Slime" State="false" />
+      <Setting Id="i152" Label="Bait Pillar" ToolTip="Atlantean Worm" State="false" />
+      <Setting Id="i153" Label="Wind Organ of Wilderness" ToolTip="Druidra" State="false" />
+      <Setting Id="i154" Label="Wind Organ of Ice" ToolTip="Crydra" State="false" />
+      <Setting Id="i155" Label="Wind Organ of Fire" ToolTip="Pyrdra" State="false" />
+    </Setting>
+
+    <Setting Id="misc" Label="Misc" State="false">
+      <Setting Id="i6580" Label="Boat" State="false" />
+      <Setting Id="i6581" Label="Speeder" State="false" />
+      <Setting Id="i45" Label="Soul Seeker" State="false" />
+      <Setting Id="i8951" Label="Rune Song" State="false" />
+      <Setting Id="i9115" Label="Phantom Spark" State="false" />
+      <Setting Id="i8361" Label="Oracle Deck" State="false" />
+      <Setting Id="i8532" Label="Godsent King Mask" State="false" />
+      <Setting Id="i8631" Label="Godsent King Breast Armor" State="false" />
+      <Setting Id="i8722" Label="Godsent King Pants Armor" State="false" />
+      <Setting Id="i8517" Label="Diving Helm" State="false" />
+      <Setting Id="i8616" Label="Kelp Mantle" State="false" />
+      <Setting Id="i8709" Label="Scuba Fins" State="false" />
+      <Setting Id="i8874" Label="Goldfish Ring" State="false" />
+      <Setting Id="i8819" Label="Neptune Necklace" State="false" />
+      <Setting Id="i5015" Label="Ocarina" State="false" />
+    </Setting>
+  </Setting>
+</Settings>
