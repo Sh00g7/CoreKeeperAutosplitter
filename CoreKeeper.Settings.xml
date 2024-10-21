@@ -67,6 +67,10 @@
     </Setting>
 
     <Setting Id="misc" Label="Misc" State="false">
+      <Setting Id="i3935" Label="Nuclear Battery" ToolTip="Brave Merchant NPC station" State="false" />
+      <Setting Id="i1601" Label="Jungle Emerald" State="false" />
+      <Setting Id="i1602" Label="Ocean Sapphire" State="false" />
+      <Setting Id="i1603" Label="Desert Ruby" State="false" />
       <Setting Id="i6580" Label="Boat" State="false" />
       <Setting Id="i6581" Label="Speeder" State="false" />
       <Setting Id="i45" Label="Soul Seeker" State="false" />
