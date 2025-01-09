@@ -77,6 +77,15 @@
       <Setting Id="i8951" Label="Rune Song" State="false" />
       <Setting Id="i9115" Label="Phantom Spark" State="false" />
       <Setting Id="i8361" Label="Oracle Deck" State="false" />
+      <Setting Id="i9135" Label="Stormbringer" State="false" />
+      <Setting Id="i5220" Label="Unleashed Core Commander Figurine" State="false" />
+      <Setting Id="i9733" Label="Starlight Nautilus" State="false" />
+      <Setting Id="i8950" Label="Broken Handle" State="false" />
+      <Setting Id="i9900" Label="Chipped Blade" State="false" />
+      <Setting Id="i9901" Label="Clear Gemstone" State="false" />
+      <Setting Id="i9906" Label="Channeling Gemstone" State="false" />
+      <Setting Id="i9907" Label="Fractured Limbs" State="false" />
+      <Setting Id="i9908" Label="Energy String" State="false" />
       <Setting Id="i8532" Label="Godsent King Mask" State="false" />
       <Setting Id="i8631" Label="Godsent King Breast Armor" State="false" />
       <Setting Id="i8722" Label="Godsent King Pants Armor" State="false" />
