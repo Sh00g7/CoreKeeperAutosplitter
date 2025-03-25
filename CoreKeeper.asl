@@ -44,8 +44,6 @@ init
 		vars.Helper["worldInfo"] = mono.MakeArray<IntPtr>(mgr, "_instance", "_saveManager", "worldInfo");
 
 		vars.Helper["version"] = mono.MakeString(mgr, "version");
-		vars.Helper["minorVersion"] = mono.MakeString(mgr, "minorVersion");
-		vars.Helper["fullVersion"] = mono.MakeString(mgr, "fullVersion");
 
 		vars.activatedCrystalsOffset = mono["Pug.Other", "WorldInfo"]["activatedCrystals"];
 		
