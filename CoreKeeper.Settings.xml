@@ -16,6 +16,7 @@
     <Setting Id="Morpha" Label="Morpha" State="false" />
     <Setting Id="Igneous" Label="Igneous" State="false" />
     <Setting Id="AtlanteanWorm" Label="Atlantean Worm" State="false" />
+    <Setting Id="Nimruza" Label="Nimruza" State="false" />
     <Setting Id="Urschleim" Label="Urschleim" State="false" />
     <Setting Id="Druidra" Label="Druidra" State="false" />
     <Setting Id="Crydra" Label="Crydra" State="false" />
@@ -48,6 +49,7 @@
       <Setting Id="i8226" Label="Morpha Scanner" State="false" />
       <Setting Id="i8228" Label="Igneous Scanner" State="false" />
       <Setting Id="i8229" Label="Atlantean Worm Scanner" State="false" />
+      <Setting Id="i8235" Label="Nimruza Scanner" State="false" />
       <Setting Id="i8231" Label="Druidra Scanner" State="false" />
       <Setting Id="i8232" Label="Crydra Scanner" State="false" />
       <Setting Id="i8233" Label="Pyrdra Scanner" State="false" />
@@ -61,6 +63,7 @@
       <Setting Id="i151" Label="Thumper" ToolTip="Ra-Akar" State="false" />
       <Setting Id="i2508" Label="Crown Summoning Idol" ToolTip="King Slime" State="false" />
       <Setting Id="i152" Label="Bait Pillar" ToolTip="Atlantean Worm" State="false" />
+      <Setting Id="i2512" Label="Corrupted Sap" ToolTip="Nimruza" State="false" />
       <Setting Id="i153" Label="Wind Organ of Wilderness" ToolTip="Druidra" State="false" />
       <Setting Id="i154" Label="Wind Organ of Ice" ToolTip="Crydra" State="false" />
       <Setting Id="i155" Label="Wind Organ of Fire" ToolTip="Pyrdra" State="false" />

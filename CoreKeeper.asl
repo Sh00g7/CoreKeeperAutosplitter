@@ -20,6 +20,7 @@ startup
 		"Morpha",
 		"Igneous",
 		"AtlanteanWorm",
+		"Nimruza",
 		"Urschleim",
 		"Druidra",
 		"Pyrdra",
@@ -122,8 +123,9 @@ split
 		}
 	}
 	
+	// TODO: add support for different versions
 	if (settings["AllBosses"]) {
-		return vars.bossesDefeated.Count == 17;
+		return vars.bossesDefeated.Count == 18;
 	}
 }
 
