@@ -12,6 +12,7 @@ Time starts when the beginning cutscene is complete and you gain control of the 
   - Glurch Statue 
   - Ghorm Statue
   - Malugaz Statue
+* Biomes
 * Items
   - Statue Crystals
   - Boss Scanners
