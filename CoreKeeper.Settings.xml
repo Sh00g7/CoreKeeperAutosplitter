@@ -31,6 +31,16 @@
     <Setting Id="obj2502" Label="Malugaz Statue Activated" State="true" />
   </Setting>
 
+  <Setting Id="biomes" Label="Biomes" State="false">
+    <Setting Id="b2" Label="Clay Caves" State="false" />
+    <Setting Id="b3" Label="Forgotten Ruins" State="false" />
+    <Setting Id="b5" Label="Azeos' Wilderness" State="false" />
+    <Setting Id="b7" Label="Sunken Sea" State="false" />
+    <Setting Id="b8" Label="Desert of Beginnings" State="false" />
+    <Setting Id="b9" Label="Shimmering Frontier" State="false" />
+    <Setting Id="b10" Label="Passage" State="false" />
+  </Setting>
+
   <Setting Id="items" Label="Items" State="false">
     <Setting Id="crystals" Label="Statue Crystals" State="false">
       <Setting Id="i2501" Label="Glurch Eye" State="false" />

@@ -6,6 +6,7 @@ startup
 	vars.Helper.Settings.CreateFromXml("Components/CoreKeeper.Settings.xml");
 	
 	vars.obtainedItems = new HashSet<int>();
+	vars.biomesExplored = new HashSet<int>();
 	vars.bossesDefeated = new HashSet<string>();
 	vars.bosses = new List<string> {
 		"Glurch",
@@ -42,11 +43,18 @@ init
 		vars.Helper["worldId"] = mono.Make<int>(mgr, "_instance", "_saveManager", "_worldId");
 		vars.Helper["worldInfo"] = mono.MakeArray<IntPtr>(mgr, "_instance", "_saveManager", "worldInfo");
 
+		vars.Helper["version"] = mono.MakeString(mgr, "version");
+		vars.Helper["minorVersion"] = mono.MakeString(mgr, "minorVersion");
+		vars.Helper["fullVersion"] = mono.MakeString(mgr, "fullVersion");
+
 		vars.activatedCrystalsOffset = mono["Pug.Other", "WorldInfo"]["activatedCrystals"];
 		
 		vars.Helper["charId"] = mono.Make<int>(mgr, "_instance", "_saveManager", "_characterId");
 		vars.Helper["charData"] = mono.MakeArray<IntPtr>(mgr, "_instance", "_saveManager", "characterData");
 		vars.Helper["wallLowered"] = mono.Make<bool>(mgr, "_instance", "player", "greatWallHasBeenLowered");
+
+		// 0: None, 1: Slime, 2: Larva, 3: Stone, 4: Obsidian, 5: Nature, 6: GreatWall, 7: Sea, 8: Desert, 9: Crystal, 10: Passage
+		vars.Helper["Biome"] = mono.Make<int>(mgr, "_instance", "player", "currentBiome");
 				
 		var inv = mono.Make<IntPtr>(mgr, "_instance", "player", "inventoryCache");
 		var cob = mono["Pug.ECS.Components", "ContainedObjectsBuffer"];
@@ -115,6 +123,10 @@ split
 			return settings["i" + current.Items[i]];
 		}
 	}
+
+	if (settings["biomes"]) {
+		return settings["b" + current.Biome] && vars.biomesExplored.Add(current.Biome);
+	}
 	
 	if (vars.line != null) {
 		foreach (var boss in vars.bosses) {
@@ -123,9 +135,20 @@ split
 		}
 	}
 	
-	// TODO: add support for different versions
 	if (settings["AllBosses"]) {
-		return vars.bossesDefeated.Count == 18;
+		// Pre 1.0
+		if (current.version[0] == "0") {
+			return vars.bossesDefeated.Count == 12;
+		}
+		else {
+			// 1.0
+			if (current.version[2] == "0") {
+				return vars.bossesDefeated.Count == 17;
+			}
+
+			// 1.1
+			return vars.bossesDefeated.Count == 18;
+		}
 	}
 }
 
