@@ -122,7 +122,7 @@ split
 		}
 	}
 
-	if (settings["biomes"]) {
+	if (settings["biomes"] && current.Biome > 1) {
 		return settings["b" + current.Biome] && vars.biomesExplored.Add(current.Biome);
 	}
 	
