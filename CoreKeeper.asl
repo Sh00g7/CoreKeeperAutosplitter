@@ -122,9 +122,8 @@ split
 		}
 	}
 
-	if (settings["biomes"] && current.Biome > 1) {
-		return settings["b" + current.Biome] && vars.biomesExplored.Add(current.Biome);
-	}
+	if (settings["biomes"] && current.Biome > 1 && settings["b" + current.Biome] && vars.biomesExplored.Add(current.Biome))
+		return true;
 	
 	if (vars.line != null) {
 		foreach (var boss in vars.bosses) {
