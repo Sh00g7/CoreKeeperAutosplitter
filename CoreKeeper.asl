@@ -46,6 +46,7 @@ init
 		vars.Helper["version"] = mono.MakeString(mgr, "version");
 
 		vars.activatedCrystalsOffset = mono["Pug.Other", "WorldInfo"]["activatedCrystals"];
+		vars.outroOffset = mono["Pug.Other", "CharacterData"]["hasPlayedOutro"];
 		
 		vars.Helper["charId"] = mono.Make<int>(mgr, "_instance", "_saveManager", "_characterId");
 		vars.Helper["charData"] = mono.MakeArray<IntPtr>(mgr, "_instance", "_saveManager", "characterData");
@@ -77,6 +78,13 @@ init
 		
 		
 		string logPath = Environment.GetEnvironmentVariable("appdata") + "\\..\\LocalLow\\Pugstorm\\Core Keeper\\Player.log";
+		try {
+			FileStream fs = new FileStream(logPath, FileMode.Open, FileAccess.Write, FileShare.ReadWrite);
+			fs.SetLength(0);
+			fs.Close();
+		} catch {
+			print(">>>>> Cannot open Core Keeper Player log!");
+		}
 		vars.line = "";
 		vars.reader = new StreamReader(new FileStream(logPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
 
@@ -93,13 +101,23 @@ update
 	if (current.worldId != -1) {
 		current.activatedCrystals = vars.Helper.ReadList<int>(current.worldInfo[current.worldId] + vars.activatedCrystalsOffset);
 	}
-	if (current.charId != -1 && settings["items"])
-		current.Items = vars.GetInventoryItems();
+	if (current.charId != -1) {
+		if(settings["items"])
+			current.Items = vars.GetInventoryItems();
+		
+		if(settings["Outro"])
+			current.playedOutro = vars.Helper.Read<bool>(current.charData[current.charId] + vars.outroOffset);
+	}
 	
 	if (vars.reader == null) 
 		return false;
 	
-	vars.line = vars.reader.ReadLine();
+	try {
+		vars.line = vars.reader.ReadLine();
+	}
+	catch (Exception e) {
+		print("================= Error reading file =================");
+	}
 }
 
 start
@@ -113,8 +131,10 @@ split
 		return settings["obj" + current.activatedCrystals[current.activatedCrystals.Count - 1]] || 
 				(settings["coreActivated"] && current.activatedCrystals.Count == 3);
 	}
-	if (settings["greatWallLowered"] && current.wallLowered != old.wallLowered && current.wallLowered)
+
+	if (settings["greatWallLowered"] && current.wallLowered != old.wallLowered && current.wallLowered) {
 		return true;
+	}
 	
 	if (settings["items"]) {
 		for (int i = 0; i < current.Items.Count; i++) {
@@ -122,13 +142,21 @@ split
 		}
 	}
 
-	if (settings["biomes"] && current.Biome > 1 && settings["b" + current.Biome] && vars.biomesExplored.Add(current.Biome))
+	if (settings["biomes"] && current.Biome > 1) {
+		return settings["b" + current.Biome] && vars.biomesExplored.Add(current.Biome);
+	}
+
+	if(settings["Outro"] && current.playedOutro && current.playedOutro != old.playedOutro) {
 		return true;
+	}
 	
 	if (vars.line != null) {
 		foreach (var boss in vars.bosses) {
-			if (vars.line.StartsWith("Try trigger achievement Defeat" + boss))
+			if (vars.line.StartsWith("Try trigger achievement Defeat" + boss)) {
+				print("======== Defeated " + boss);
 				return settings[boss] && vars.bossesDefeated.Add(boss);
+			}
+				
 		}
 	}
 	

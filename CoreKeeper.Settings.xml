@@ -2,6 +2,7 @@
 <Settings>
   <Setting Id="coreActivated" Label="Core Activated" ToolTip="Alternative if you do not want to split for each statue. The Core is activated when all 3 Boss Statues are activated." State="false" />
   <Setting Id="greatWallLowered" Label="Great Wall Lowered" State="false" />
+  <Setting Id="Outro" Label="Outro" ToolTip="End time for Core Commander%" State="false" />
 
   <Setting Id="bosses" Label="Bosses" State="false">
     <Setting Id="Glurch" Label="Glurch" State="false" />
