@@ -98,8 +98,6 @@ exit {
 
 update
 {
-	print("Bosses defeated: " + vars.bossesDefeated.Count);
-	//print("Game version " + current.version); 1.1.1
 	if (current.worldId != -1) {
 		current.activatedCrystals = vars.Helper.ReadList<int>(current.worldInfo[current.worldId] + vars.activatedCrystalsOffset);
 	}
