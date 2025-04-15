@@ -98,6 +98,8 @@ exit {
 
 update
 {
+	print("Bosses defeated: " + vars.bossesDefeated.Count);
+	//print("Game version " + current.version); 1.1.1
 	if (current.worldId != -1) {
 		current.activatedCrystals = vars.Helper.ReadList<int>(current.worldInfo[current.worldId] + vars.activatedCrystalsOffset);
 	}
@@ -147,7 +149,8 @@ split
 	if (vars.line != null) {
 		foreach (var boss in vars.bosses) {
 			if (vars.line.StartsWith("Try trigger achievement Defeat" + boss)) {
-				return settings[boss] && vars.bossesDefeated.Add(boss);
+				if(vars.bossesDefeated.Add(boss))
+					return settings[boss];
 			}
 				
 		}
@@ -155,12 +158,12 @@ split
 	
 	if (settings["AllBosses"]) {
 		// Pre 1.0
-		if (current.version[0] == "0") {
+		if (current.version[0] == '0') {
 			return vars.bossesDefeated.Count == 12;
 		}
 		else {
 			// 1.0
-			if (current.version[2] == "0") {
+			if (current.version[2] == '0') {
 				return vars.bossesDefeated.Count == 17;
 			}
 
