@@ -26,7 +26,9 @@ startup
 		"Druidra",
 		"Pyrdra",
 		"Crydra",
-		"CoreCommander"
+		"CoreCommander",
+		"Oblidra",
+		"Sahabar"
 	};
 }
 
@@ -166,7 +168,14 @@ split
 			}
 
 			// 1.1
-			return vars.bossesDefeated.Count == 18;
+			if (current.version[2] == '1') {
+				return vars.bossesDefeated.Count == 18;
+			}
+			
+			// 1.2
+			if (current.version[2] == '2') {
+				return vars.bossesDefeated.Count == 20;
+			}
 		}
 	}
 }

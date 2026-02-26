@@ -23,6 +23,8 @@
     <Setting Id="Crydra" Label="Crydra" State="false" />
     <Setting Id="Pyrdra" Label="Pyrdra" State="false" />
     <Setting Id="CoreCommander" Label="Core Commander" State="false" />
+	<Setting Id="Oblidra" Label="Oblidra" State="false" />
+	<Setting Id="Sahabar" Label="S.A.H.A.B.A.R." State="false" />
     <Setting Id="AllBosses" Label="All Bosses Defeated" State="false" />
   </Setting>
 
@@ -40,6 +42,7 @@
     <Setting Id="b8" Label="Desert of Beginnings" State="false" />
     <Setting Id="b9" Label="Shimmering Frontier" State="false" />
     <Setting Id="b10" Label="Passage" State="false" />
+	<Setting Id="b11" Label="Breaker's Reach" State="false" />
   </Setting>
 
   <Setting Id="items" Label="Items" State="false">
@@ -65,6 +68,8 @@
       <Setting Id="i8232" Label="Crydra Scanner" State="false" />
       <Setting Id="i8233" Label="Pyrdra Scanner" State="false" />
       <Setting Id="i8234" Label="Urschleim Scanner" State="false" />
+	  <Setting Id="i8259" Label="Oblidra Scanner" State="false" />
+	  <Setting Id="i8260" Label="S.A.H.A.B.A.R. Scanner" State="false" />
     </Setting>
 
     <Setting Id="bossSummons" Label="Boss Summons" State="false">
@@ -78,6 +83,8 @@
       <Setting Id="i153" Label="Wind Organ of Wilderness" ToolTip="Druidra" State="false" />
       <Setting Id="i154" Label="Wind Organ of Ice" ToolTip="Crydra" State="false" />
       <Setting Id="i155" Label="Wind Organ of Fire" ToolTip="Pyrdra" State="false" />
+	  <Setting Id="i156" Label="Wind Organ of Void" ToolTip="Oblidra" State="false" />
+	  <Setting Id="i2515" Label="Profane Override" ToolTip="S.A.H.A.B.A.R." State="false" />
     </Setting>
 
     <Setting Id="misc" Label="Misc" State="false">
